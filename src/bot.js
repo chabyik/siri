@@ -22,7 +22,7 @@ class Bot extends Client {
         for (const file of fs.readdirSync(path.join(__dirname, 'commands'))) {
             const command = require(`./commands/${file}`);
             const commandName = Object.keys(command)[0];
-            Object.assign(this.commands, { commandName: command[commandName].bind(this) });
+            Object.assign(this.commands, { [commandName]: command[commandName].bind(this) });
         }
         
         this.on('messageCreate', message => {
