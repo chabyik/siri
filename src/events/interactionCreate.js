@@ -104,7 +104,7 @@ module.exports = {
                     })
                 });
             
-            interaction.reply({ content: '갱신되었습니다.', ephmeral: true });
+            interaction.reply({ content: '갱신되었습니다.', ephemeral: true });
         }
     }
 };
